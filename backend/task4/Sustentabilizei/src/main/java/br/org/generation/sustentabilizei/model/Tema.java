@@ -19,7 +19,15 @@ public class Tema {
 	
 	@NotNull(message = "Por favor, insira a descrição!!! ")
 	@Size (max = 500)
+	private String tema;
+	
+	@NotNull(message = "Por favor, insira a descrição!!! ")
+	@Size (max = 500)
 	private String descricao;
+	
+	@NotNull(message = "Por favor, insira a descrição!!! ")
+	@Size (max = 255)
+	private String palavraChave;
 
 	public long getId() {
 		return id;
@@ -29,6 +37,14 @@ public class Tema {
 		this.id = id;
 	}
 
+	public String getTema() {
+		return tema;
+	}
+
+	public void setTema(String tema) {
+		this.tema = tema;
+	}
+
 	public String getDescricao() {
 		return descricao;
 	}
@@ -36,7 +52,15 @@ public class Tema {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	
-	
+
+	public String getPalavraChave() {
+		return palavraChave;
+	}
+
+	public void setPalavraChave(String palavraChave) {
+		this.palavraChave = palavraChave;
+	}
+
+		
 	
 }
