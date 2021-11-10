@@ -44,10 +44,8 @@ public class PostagensController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Postagens> postPostagens(@RequestBody Postagens postagens) {
-		return postagensRepository.findById(postagens.getId())
-				.map(resposta -> ResponseEntity.ok(postagensRepository.save(postagens)))
-				.orElse(ResponseEntity.notFound().build());
+	public ResponseEntity<Postagens> postCategoria(@RequestBody Postagens postagens){
+		return ResponseEntity.status(HttpStatus.CREATED).body(postagensRepository.save(postagens));	
 	}
 	
 	@PutMapping
