@@ -22,7 +22,7 @@ import br.org.generation.sustentabilizei.repository.UsuarioRepository;
 
 @RestController
 @RequestMapping("/usuarios")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "", allowedHeaders = "")
 public class UsuarioController {
 
 	@Autowired
