@@ -8,8 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import br.org.generation.sustentabilizei.model.UsuarioLogin;
 import br.org.generation.sustentabilizei.model.Usuario;
+import br.org.generation.sustentabilizei.model.UsuarioLogin;
+import br.org.generation.sustentabilizei.repository.UsuarioRepository;
 
 /*
  Classe responsavel pela autenticação do usuário através da criação de um token.
@@ -23,7 +24,7 @@ public class UsuarioService {
 	
 	public Optional <Usuario> cadastrarUsuario (Usuario usuario) {
 		
-		if (usuarioRepository.findByUsuario (usuario.getUsuario()).isPresent());
+		if (usuarioRepository.findByUsuario (usuario.getUsuario()).isPresent())
 		{
 			return Optional.empty();
 		}
@@ -86,3 +87,4 @@ public class UsuarioService {
 		
 		return encoder.matches(senhaDigitada, senhaBanco);
 	}
+}

@@ -19,12 +19,16 @@ import org.springframework.web.bind.annotation.RestController;
 import br.org.generation.sustentabilizei.model.Usuario;
 import br.org.generation.sustentabilizei.model.UsuarioLogin;
 import br.org.generation.sustentabilizei.repository.UsuarioRepository;
+import br.org.generation.sustentabilizei.service.UsuarioService;
 
 @RestController
 @RequestMapping("/usuarios")
 @CrossOrigin(origins = "", allowedHeaders = "")
 public class UsuarioController {
 
+	@Autowired
+	private UsuarioService usuarioService;
+	
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 
@@ -36,8 +40,8 @@ public class UsuarioController {
 	}
 
 	@PostMapping("/logar")
-	public ResponseEntity<UsuarioLogin> login(@RequestBody Optional<UsuarioLogin> user) {
-		return usuarioService.autenticarUsuario(usuario).map(resposta -> ResponseEntity.ok(resposta))
+	public ResponseEntity<UsuarioLogin> login(@RequestBody Optional<UsuarioLogin> usuarioLogin) {
+		return usuarioService.autenticarUsuario(usuarioLogin).map(resposta -> ResponseEntity.ok(resposta))
 				.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
 
 	}
