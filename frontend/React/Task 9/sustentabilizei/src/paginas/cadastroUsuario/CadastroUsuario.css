@@ -1,18 +1,30 @@
-.imagem2 {
+.card{
+    background: #BCF2BB;
     
-    background-image: url(https://imgur.com/KPmWodh.jpg);
+}
+
+.background{
+    background-color: #E3F2DC;
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
     background-size: cover;
-     background-position: center;
-
+    background-position: center;
 }
 
-.textos2 {
-    font-weight: bold !important;
+.color-input{
+    background-color: white;
+    color: white;
+    border-color: white;
+    border-radius: 20px;
+    height: 30px;
 }
 
-.btnCancelar {
-    margin-right: 20px !important;
+.botao{
+    background-color: #ADD9B0 !important;
+    border-radius: 20px!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+

@@ -31,10 +31,15 @@
 }
 
 .card{
-    background-image: url(https://imgur.com/CiDbZrY.jpg);
     width: 350px;
     height: 400px;
     border: solid 1px;
     margin-right: 50px;
-    
+}
+
+
+.carro{
+    display: flex!important;
+    flex-direction: row!important;
+    width: 84%!important;
 }

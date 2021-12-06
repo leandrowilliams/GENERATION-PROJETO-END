@@ -26,7 +26,7 @@ function Footer () {
                             </a>
                         </Box>
                     </Box>
-                    <Box className = "box2">
+                    <Box className = "box1">
                         <Box paddingTop={1}>
                             <Typography variant="subtitle2" align="center" gutterBottom className = "textos" >© 2020 Copyright:</Typography>
                         </Box>

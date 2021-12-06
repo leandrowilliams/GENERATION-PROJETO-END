@@ -1,23 +1,30 @@
-.textos1 {
-    font-weight : bold !important;
-}
-
-.imagem {
-    
-        background-image: url(https://imgur.com/KPmWodh.jpg);
-        background-repeat: no-repeat;
-        width: 100vh;
-        min-height: 100vh;
-        background-size: cover;
-         background-position: center;
+.card{
+    background: #BCF2BB;
     
 }
 
-.botao-cor {
-    background-color: black;
-    text-decoration: none;
+.background{
+    background-color: #E3F2DC;
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
 
-.text-decorator-none {
-    text-decoration: none;
+.color-input{
+    background-color: white;
+    color: white;
+    border-color: white;
+    border-radius: 20px;
+    height: 30px;
 }
+
+.botao{
+    background-color: #ADD9B0 !important;
+    border-radius: 20px!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
