@@ -1,45 +1,78 @@
-import { Box } from '@mui/system'
-import React from 'react'
-import Typography from '@mui/material/Typography'
-import { Grid, Button } from '@mui/material'
-import "./Login.css"
+import { Box, Grid, TextField, Typography, Button } from "@material-ui/core";
+import { Link, useHistory } from "react-router-dom";
+import useLocalStorage from "react-use-localstorage"
+import { login } from "../../services/service";
+import UserLogin from "../../models/UserLogin";
+import User from "../../models/User"
+import React,{ ChangeEvent, useState, useEffect } from "react";
+import "./Login.css";
+import { fontWeight } from "@mui/system";
+import { url } from "inspector";
 
-function Login() {
-
+    function Login() {
+        let history = useHistory();
+        const[token, setToken] = useLocalStorage("token");
+        const [userLogin, setUserLogin] = useState<UserLogin>(
+            {
+                id: 0,
+                usuario: "",
+                senha: "",
+                token: ""
+            })
+    
+            function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+    
+                setUserLogin({
+                    ...userLogin,
+                    [e.target.name]: e.target.value
+                })
+            }
+    
+                useEffect(()=>{
+                    if(token != "" ){
+                        history.push("/home")
+                    }
+                }, [token])
+    
+            async function onSubmit(e: ChangeEvent<HTMLFormElement>){
+                e.preventDefault();
+               try {
+                   await login("/usuarios/logar", userLogin, setToken)
+                   
+    
+                   alert("Usuario logado com sucesso!");
+               } catch (error) {
+                   alert("Dados do usuario incorretos. Erro ao logar!")
+               }
+            }
 
     return (
-        <Grid container className="background">
-            <Grid item xs={12}>
-
-                <Box display="flex" justifyContent="center" alignItems="center" height="80vh" >
-                    <Box className="card" width={400} height="50vh" borderRadius={5} marginTop={10} display="flex" justifyContent="center" alignItems="center">
-                        <Box className = "fonte">
-                            <Typography variant="h4" color="#545951" align="center">
-                                Login
-                            </Typography>
-
-                            <form >
-                                <Box marginY={6}>
-                                    <input type="text" className="color-input"
-                                        placeholder="                 Email" />
-                                </Box>
-
-                                <Box marginY={6}>
-
-                                    <input type="password" className="color-input"
-                                        placeholder="                 Senha             " />
-                                </Box>
-                                <Button variant="contained"   className="botao">
-                                    Login
-                                </Button>
+            <Grid container direction = "row" justifyContent = "center" alignItems = "center">
+                <Grid item xs = {12} alignItems = "center" className = "background">
+                    <Box paddingX = {10} display="flex" justifyContent="center" alignItems="center" height="80vh" borderRadius = {5}>
+                        <form onSubmit = {onSubmit} className="card" >
+                                <Typography variant = "h3" gutterBottom  component = "h3" align = "center" >Logar</Typography>
+                                <TextField  onChange = {(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id = "usuario" label = "usuario" variant = "outlined" name = "usuario" margin = "normal"  fullWidth />
+                                <TextField  onChange = {(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id = "senha" label = "senha" variant = "outlined" name = "senha" margin = "normal" type = "password"fullWidth />
+                                <Box marginTop = {2} textAlign = "center"  > 
+                                    <Link to = "/login" className = "text-decorator-none" >
+                                        <Button  variant = "contained"   className = "btnCancelar botao"  >
+                                            Cancelar
+                                        </Button>   
+                                    </Link>
+                                    <Button type = "submit" variant = "contained" className = "botao-cor botao" >
+                                            Logar
+                                        </Button>   
+                                </Box>    
+                                
                             </form>
-                        </Box>
                     </Box>
-                </Box>
+    
+                </Grid>
+    
             </Grid>
-
-        </Grid>
-    )
+        );
+    
 }
 
 export default Login;

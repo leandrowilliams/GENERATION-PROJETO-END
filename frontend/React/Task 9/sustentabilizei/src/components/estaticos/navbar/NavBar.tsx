@@ -47,19 +47,6 @@ function Navbar() {
                     </Box>
                     <Box display="flex"  >
                         <Box mx={1} style={{ cursor: "pointer" }}>
-                        <div>
-                                <a href="#">Useless Link</a>
-                                <ul>
-                                    <li>
-                                    <a href="#">Dropdown Link</a>
-                                    <ul>
-                                        <li><a href="#">Link 1</a></li>
-                                        <li><a href="#">Link 2</a></li>
-                                        <li><a href="#">Link 3</a></li>
-                                    </ul>
-                                    </li>
-                                </ul>
-                                </div>
                             <Typography variant="h6" color="inherit">
                                Cadastre-se
                             </Typography>

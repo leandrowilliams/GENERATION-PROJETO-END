@@ -1,5 +1,8 @@
 .card{
     background: #BCF2BB;
+    width: 400px!important;
+    height: 500px!important;
+    border-radius: 50px!important;
     
 }
 
@@ -26,5 +29,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 15px!important;
 }
 
+.fonte {
+    color:"#545951";
+}

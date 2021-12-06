@@ -1,5 +1,8 @@
 .card{
     background: #BCF2BB;
+    width: 400px!important;
+    height: 500px!important;
+    border-radius: 50px!important;
     
 }
 
@@ -14,7 +17,7 @@
 
 .color-input{
     background-color: white;
-    color: white;
+    color: #545951;
     border-color: white;
     border-radius: 20px;
     height: 30px;
@@ -28,3 +31,6 @@
     align-items: center;
 }
 
+.fonte{
+    color: #545951;
+}
