@@ -1,13 +1,11 @@
 import { Box, Grid, TextField, Typography, Button } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import useLocalStorage from "react-use-localstorage"
-import { login } from "../../services/service";
+import { login } from "../../services/Service";
 import UserLogin from "../../models/UserLogin";
-import User from "../../models/User"
 import React,{ ChangeEvent, useState, useEffect } from "react";
 import "./Login.css";
-import { fontWeight } from "@mui/system";
-import { url } from "inspector";
+
 
     function Login() {
         let history = useHistory();
@@ -26,6 +24,7 @@ import { url } from "inspector";
                     ...userLogin,
                     [e.target.name]: e.target.value
                 })
+                console.log("Login "+JSON.stringify(userLogin));
             }
     
                 useEffect(()=>{
