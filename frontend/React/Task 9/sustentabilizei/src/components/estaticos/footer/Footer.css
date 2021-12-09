@@ -1,19 +1,19 @@
 .box1 {
-    background-color: #ADD9B0;
+    background-color:#ADD9B0;
      height: "120px";
 }
 
 .box2 {
    
-   background-color:black;
-    height: "70px";
+   background-color:#ADD9B0;
+    height: "60px";
  }
 
 .redes {
    font-size: 60px !important;
-    color: white;
+    color: #E3F2DC;
 }
 
 .textos {
-    color: white;
+    color: #545951;
 }

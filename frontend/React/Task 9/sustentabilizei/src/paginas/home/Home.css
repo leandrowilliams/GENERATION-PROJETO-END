@@ -1,4 +1,17 @@
+.fontes{
+    font-size: 80px !important;
+    color: white !important;
+    width: 2250px;
+    height: 400px;
+    border: 0px;
+    margin-right: 50px;
+}
+
 .grid1{
+    viewport-fit: "100vh";
+}
+
+.grid2{
     viewport-fit: "100vh";
 }
 
@@ -25,16 +38,50 @@
     background-color: #e3f2dc;
 }
 
+/* cor de fundo box */
+.page2{
+    background-color: blueviolet;
+}
+
+.page3{
+    background-color: yellow;
+}
+
+.page4{
+    background-color: green;
+}
+
 .sus-titulo{
     font-size: 70px !important;
     color: #545951;
 }
 
 .card{
-    background-image: url(https://imgur.com/CiDbZrY.jpg);
+   /* background-image: url(https://imgur.com/CiDbZrY.jpg); */
     width: 350px;
     height: 400px;
-    border: solid 1px;
+    border: 0px;
     margin-right: 50px;
-    
+}
+
+
+.card2{
+    width: 2250px;
+    height: 400px;
+    border: 0px;
+    margin-right: 50px;
+}
+
+.card3{
+    width: 2250px;
+    height: 400px;
+    border: 0px;
+    margin-right: 50px;
+}
+
+.card4{
+    width: 2250px;
+    height: 400px;
+    border: 0px;
+    margin-right: 50px;
 }
