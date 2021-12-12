@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap');
+
 .grid1{
     viewport-fit: "100vh";
 }
@@ -22,12 +24,13 @@
 }
 
 .page{
-    background-color: #e3f2dc;
+    background: linear-gradient( #bfeb55);
 }
 
-.sus-titulo{
+#sus-titulo{
     font-size: 70px !important;
-    color: #545951;
+    color: #458766;
+    font-family: 'Signika', sans-serif;
 }
 
 .card{

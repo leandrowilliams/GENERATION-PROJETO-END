@@ -5,10 +5,11 @@ import "./NavBar.css"
 function Navbar() {
     return (
         <>
+
             <AppBar position="static"  >
                 <Toolbar variant="dense" className= "color-nav container">
                     <Box style={{ cursor: "pointer" }} >
-                        <Typography variant="h5" color="inherit">
+                        <Typography variant="h5" id="colorText">
                             Sustentabilizei
                         </Typography>
                     </Box>
@@ -16,17 +17,15 @@ function Navbar() {
 
                     
                     <Box display="flex" justifyContent="start" className= "container2" >
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
+                        <Box mx={2} style={{ cursor: "pointer" }}>
+                            <Typography variant="h6" color="inherit" id="efeito">
                                Home
                             </Typography>
                         </Box>
-                        <Box mx={1} style={{ cursor: "pointer" }}  className= "container2">
-                            <Typography variant="h6" color="inherit">
-                                Sobre Nós
-                            </Typography>
+                        <Box mx={2} style={{ cursor: "pointer" }}  className= "container2">
+                            <Typography variant="h6" color="inherit" id="efeito">Sobre Nós</Typography>
                         </Box>
-                        <Box mx={1} style={{ cursor: "pointer" }}  className= "container2">
+                        <Box mx={2} style={{ cursor: "pointer" }}  className= "container2" id="efeito">
                             <Typography variant="h6" color="inherit">
                                 Contato
                             </Typography>
@@ -35,7 +34,7 @@ function Navbar() {
                    <Box 
                    display = "inline-flex"
                    justifyContent = "end"
-                   alignItems = "end"
+                   alignItems = "center"
                    marginLeft = "1230px"
                    >
                     <Box display="flex"  >

@@ -7,13 +7,15 @@ import "./Home.css";
 import Container from '@mui/material/Container';
 import CarouselComponent from "../../components/carousel/CarouselComponent";
 
+
 function Home() {
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className="grid1, page">
                 <Grid alignItems="center" item xs={12}>
                     <Box paddingTop={5}>
-                        <Typography align="center" className="sus-titulo">#Sustentabilizei</Typography>
+
+                        <Typography align="center" id="sus-titulo" >#Sustentabilizei </Typography>
                     </Box>
                 </Grid>
                 
@@ -23,9 +25,18 @@ function Home() {
                         <CarouselComponent/>
                     </Box>
                 </Grid>
+                
+
+
+
+
+
+
+
+
                 <Grid item xs={12}>
                     <Box padding={5}>
-                        <Typography variant="h3" align="center" className="sus-titulo">O que é sustentabilizar?</Typography>
+                        <Typography variant="h3" align="center" id="sus-titulo">O que é sustentabilizar?</Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={12}>
