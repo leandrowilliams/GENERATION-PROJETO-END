@@ -4,7 +4,7 @@ import User from "../../models/User"
 import { cadastroUsuario } from "../../services/service";
 import { Grid, Box, Typography, Button, TextField } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import "./CadastroUsuario.css"
+import "./CadastroUsuario.css";
 
 function CadastroUsuario() {
     

@@ -3,11 +3,9 @@ import { Link, useHistory } from "react-router-dom";
 import useLocalStorage from "react-use-localstorage"
 import { login } from "../../services/service";
 import UserLogin from "../../models/UserLogin";
-import User from "../../models/User"
 import React,{ ChangeEvent, useState, useEffect } from "react";
 import "./Login.css";
-import { fontWeight } from "@mui/system";
-import { url } from "inspector";
+
 
     function Login() {
         let history = useHistory();
@@ -26,6 +24,7 @@ import { url } from "inspector";
                     ...userLogin,
                     [e.target.name]: e.target.value
                 })
+                console.log("Login "+JSON.stringify(userLogin));
             }
     
                 useEffect(()=>{
@@ -51,7 +50,7 @@ import { url } from "inspector";
                 <Grid item xs = {12} alignItems = "center" className = "background">
                     <Box paddingX = {10} display="flex" justifyContent="center" alignItems="center" height="80vh" borderRadius = {5}>
                         <form onSubmit = {onSubmit} className="card" >
-                                <Typography variant = "h3" gutterBottom  component = "h3" align = "center" >Logar</Typography>
+                                <Typography variant = "h3" gutterBottom  component = "h3" align = "center"  >Logar</Typography>
                                 <TextField  onChange = {(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id = "usuario" label = "usuario" variant = "outlined" name = "usuario" margin = "normal"  fullWidth />
                                 <TextField  onChange = {(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id = "senha" label = "senha" variant = "outlined" name = "senha" margin = "normal" type = "password"fullWidth />
                                 <Box marginTop = {2} textAlign = "center"  > 

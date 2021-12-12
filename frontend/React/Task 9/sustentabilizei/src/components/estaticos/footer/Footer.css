@@ -1,19 +1,23 @@
 .box1 {
+<<<<<<< HEAD
     background-color:  #bfeb55;
+=======
+    background-color:#ADD9B0;
+>>>>>>> 9559ec46835bd2237b62fbecafe1602337e85412
      height: "120px";
 }
 
 .box2 {
    
-   background-color:black;
-    height: "70px";
+   background-color:#ADD9B0;
+    height: "60px";
  }
 
 .redes {
    font-size: 60px !important;
-    color: white;
+    color: #E3F2DC;
 }
 
 .textos {
-    color: white;
+    color: #545951;
 }
