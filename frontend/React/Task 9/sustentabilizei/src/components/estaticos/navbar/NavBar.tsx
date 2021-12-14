@@ -8,6 +8,7 @@ import { addToken } from '../../../store/tokens/actions';
 import { toast } from "react-toastify";
 
 function Navbar() {
+
     let history = useHistory();
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
@@ -65,6 +66,42 @@ function Navbar() {
                     alignItems="end"
                     marginLeft="1230px"
                 >
+
+    return (
+        <>
+
+            <AppBar position="static"  >
+                <Toolbar variant="dense" className= "color-nav container">
+                    <Box style={{ cursor: "pointer" }} >
+                        <Typography variant="h5" id="colorText">
+                            Sustentabilizei
+                        </Typography>
+                    </Box>
+                    
+
+                    
+                    <Box display="flex" justifyContent="start" className= "container2" >
+                        <Box mx={2} style={{ cursor: "pointer" }}>
+                            <Typography variant="h6" color="inherit" id="efeito">
+                               Home
+                            </Typography>
+                        </Box>
+                        <Box mx={2} style={{ cursor: "pointer" }}  className= "container2">
+                            <Typography variant="h6" color="inherit" id="efeito">Sobre Nós</Typography>
+                        </Box>
+                        <Box mx={2} style={{ cursor: "pointer" }}  className= "container2" id="efeito">
+                            <Typography variant="h6" color="inherit">
+                                Contato
+                            </Typography>
+                        </Box>
+                    </Box>
+                   <Box 
+                   display = "inline-flex"
+                   justifyContent = "end"
+                   alignItems = "center"
+                   marginLeft = "1230px"
+                   >
+
                     <Box display="flex"  >
                         <Box mx={1} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">

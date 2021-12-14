@@ -1,16 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap');
+
 .cursor {
     cursor: pointer;
     color: white;
 }
 
 .color-nav {
-    background-color: #ADD9B0;
+    background-color:  #bfeb55;
 }
 
 .text-decorator-none{
     text-decoration: none;
 }
 
+#colorText{
+    color: #458766;
+    font-family: 'Signika', sans-serif;
+}
 .container {
     display: flex;
     justify-content: flex-start;
@@ -21,8 +27,9 @@
 .container2 {
     display: flex;
     justify-content: center;
-    
-
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #458766 ;
 }
 
 .container3 {
@@ -31,6 +38,9 @@
     padding-right: 30px;
     
 
+}
+#efeito:hover {
+    transform: scale(0.65);
 }
 
 

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap');
+=======
 .fontes{
     font-size: 80px !important;
     color: white !important;
@@ -6,6 +9,7 @@
     border: 0px;
     margin-right: 50px;
 }
+>>>>>>> 9559ec46835bd2237b62fbecafe1602337e85412
 
 .grid1{
     viewport-fit: "100vh";
@@ -35,9 +39,12 @@
 }
 
 .page{
-    background-color: #e3f2dc;
+    background: linear-gradient( #bfeb55);
 }
 
+<<<<<<< HEAD
+#sus-titulo{
+=======
 /* cor de fundo box */
 .page2{
     background-color: blueviolet;
@@ -52,8 +59,10 @@
 }
 
 .sus-titulo{
+>>>>>>> 9559ec46835bd2237b62fbecafe1602337e85412
     font-size: 70px !important;
-    color: #545951;
+    color: #458766;
+    font-family: 'Signika', sans-serif;
 }
 
 .card{
