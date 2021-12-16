@@ -1,40 +1,63 @@
-.card{
-    background: #BCF2BB;
-    width: 400px!important;
-    height: 500px!important;
-    border-radius: 50px!important;
+.card-cadastro{
+    background: #263165 !important;
+    width: 600px!important;
+    height: 550px!important;
+    border-radius: 10px!important;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    
+    font-weight: Teko !important;
+    padding: 20px !important;
 }
 
 .background{
-    background-color: #E3F2DC;
+    background: linear-gradient(45deg,#88c636 , #263165 );
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    font-weight: Teko !important;
+    padding: 20px !important;
 }
 
 .color-input{
-    background-color: white;
-    color: white;
-    border-color: white;
-    border-radius: 20px;
-    height: 30px;
+    background-color: transparent;
+    border: 1px!important;
+    border-color: white!important;
+    
 }
 
-.botao{
-    background-color: #ADD9B0 !important;
+.botao2{
+    background-color: #88c636 !important;
     border-radius: 20px!important;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 15px!important;
+    transform: scale(0.65);
+    border-bottom: 1px #000 solid;
+    transition: transform 1s;
 }
 
-.fonte {
-    color:"#545951";
+.fonte{
+    color: white;
 }
+
+.hover-botao{
+    border-bottom: 1px rgba(0, 0, 0, 0.39) solid;
+    transition: transform 1s;
+}
+
+.botao-cadastro {
+color: #3f51b5;
+}
+
+.imagem-logo{
+    background-image: "https://i.imgur.com/fmYFcHr.png";
+}
+
+

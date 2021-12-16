@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap%27");
 
 .cursor {
     cursor: pointer;
@@ -20,7 +20,7 @@
 .container {
     display: flex;
     justify-content: flex-start;
-    
+
 
 }
 
@@ -36,12 +36,21 @@
     display: flex;
     justify-content: flex-end;
     padding-right: 30px;
-    
+
 
 }
 #efeito:hover {
     transform: scale(0.65);
+    border-bottom: 1px rgba(0, 0, 0, 0.39) solid;
+    transition: transform 1s;
 }
 
+.MuiBox-root-14, .MuiBox-root-18 {
+color: #3f51b5;
+}
 
-
+.MuiBox-root-14:hover, .MuiBox-root-18:hover {
+transform: scale(0.65);
+border-bottom: 1px #000 solid;
+transition: transform 1s;
+}

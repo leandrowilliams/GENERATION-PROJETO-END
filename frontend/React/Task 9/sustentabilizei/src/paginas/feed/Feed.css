@@ -1,0 +1,12 @@
+.back-feed{
+    background: linear-gradient(45deg,#88c636 , #263165 ) !important;
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.botao-criar{
+    background: transparent;
+}

@@ -5,6 +5,8 @@ import { Button, Box } from "@material-ui/core"
 import CloseIcon from '@material-ui/icons/Close';
 import './ModalPostagem.css';
 import CadastroPost from '../cadastroPost/CadastroPost';
+import { SpeedDialIcon, SpeedDial } from '@mui/material';
+import EditIcon from '@mui/icons-material/Edit';
 
 
 function getModalStyle() {
@@ -59,9 +61,13 @@ function ModalPostagem() {
     return (
         <div>
             <Button
-                variant="outlined"
-                className="btnModal"
-                onClick={handleOpen}>Nova Postagem</Button>
+                onClick={handleOpen}>
+                <SpeedDial
+                    ariaLabel="SpeedDial openIcon example"
+                    icon={<SpeedDialIcon openIcon={<EditIcon />} />}
+                >
+                </SpeedDial>
+                </Button>
             <Modal
                 open={open}
                 onClose={handleClose}

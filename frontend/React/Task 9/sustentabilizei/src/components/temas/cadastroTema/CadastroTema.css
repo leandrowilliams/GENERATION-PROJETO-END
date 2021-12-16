@@ -1,3 +1,12 @@
 .topo{
     margin-top: 20px;
 }
+
+.background-tema{
+    background-color: #E3F2DC;
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
