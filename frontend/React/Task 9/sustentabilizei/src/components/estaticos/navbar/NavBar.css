@@ -43,7 +43,10 @@
     transform: scale(0.65);
     border-bottom: 1px rgba(0, 0, 0, 0.39) solid;
     transition: transform 1s;
+<<<<<<< HEAD
+=======
 }
+/*Formatação login*/
 
 .MuiBox-root-14, .MuiBox-root-18 {
 color: #3f51b5;
@@ -53,4 +56,21 @@ color: #3f51b5;
 transform: scale(0.65);
 border-bottom: 1px #000 solid;
 transition: transform 1s;
+>>>>>>> a93e364e97ac927352f6e4596ac022c111b6e83b
 }
+
+.MuiBox-root-14, .MuiBox-root-18 {
+color: #3f51b5;
+}
+
+<<<<<<< HEAD
+.MuiBox-root-14:hover, .MuiBox-root-18:hover {
+transform: scale(0.65);
+border-bottom: 1px #000 solid;
+transition: transform 1s;
+}
+=======
+
+
+
+>>>>>>> a93e364e97ac927352f6e4596ac022c111b6e83b
