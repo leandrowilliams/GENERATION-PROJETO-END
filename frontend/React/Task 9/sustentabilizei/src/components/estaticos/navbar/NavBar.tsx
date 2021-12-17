@@ -6,18 +6,19 @@ import "./NavBar.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/actions';
-import {toast} from "react-toastify";
+import { toast } from "react-toastify";
+
 
 function Navbar() {
     let history = useHistory();
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
-    const dispatch= useDispatch();
+    const dispatch = useDispatch();
 
     function goLogout() {
         dispatch(addToken(""));
-        toast.info("Usuário deslogado com sucesso!!", {
+        toast.info("Usurio logado", {
             position: "top-right",
             autoClose: 2000,
             hideProgressBar: false,
@@ -31,49 +32,62 @@ function Navbar() {
     }
 
     var navbarComponent;
+    var navbarhomeComponent;
 
-    if(token !== ""){
-        navbarComponent = <AppBar position="static" style={{ backgroundColor: "#E8D3B6" }}>
+    if (token !== "") {
+        navbarComponent = <AppBar position="relative" style={{ backgroundColor: "#263165" }}>
             <Toolbar variant="dense" >
-                <Box style={{ cursor: "pointer" }} >
-                    <Typography variant="h5" className="titulo">
-                        BlogPessoal
-                    </Typography>
-                </Box>
+                    <div>
+                    <img className="imglogo9" src="https://i.imgur.com/fmYFcHr.png" alt="" />
+                    </div>
+                    <Box 
+                   display = "flex"
+                   justifyContent = "center"
+                   alignItems = "center"
+                   marginLeft = "200px" ></Box>
 
-                <Box display="flex" justifyContent="start">
-                    <Link to="/home" className="text-decorator-none">
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" className="texto">
-                                home
-                            </Typography>
-                        </Box>
-                    </Link>
-                    <Link to="/posts" className="text-decorator-none">
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" className="texto">
-                                postagens
-                            </Typography>
-                        </Box>
-                    </Link>
-                    <Link to="/temas" className="text-decorator-none">
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" className="texto">
-                                temas
-                            </Typography>
-                        </Box>
-                    </Link>
-                    <Link to="/formularioTema" className="text-decorator-none">
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" className="texto">
-                                cadastrar tema
-                            </Typography>
-                        </Box>
-                    </Link>
+                <Box display="flex" justifyContent="start"> 
+                    <Box mx={1} style={{ cursor: "pointer" }} >
+                        <Typography variant="h6" className="texto">
+                            Feed
+                        </Typography>
+                    </Box>
+
+                    <Box mx={1} style={{ cursor: "pointer" }} >
+                        <Typography variant="h6" className="texto">
+                            Postagem
+                        </Typography>
+                    </Box>
+
+                    <Box mx={1} style={{ cursor: "pointer" }} >
+                        <Typography variant="h6" className="texto">
+                            Tema
+                        </Typography>
+                    </Box>
+
+                    <Box mx={1} style={{ cursor: "pointer" }} >
+                        <Typography variant="h6" className="texto">
+                            Cadastar Tema
+                        </Typography>
+                    </Box>
+
+
+                    <Box mx={1} style={{ cursor: "pointer" }} >
+                        <Typography variant="h6" className="texto">
+                            Postagens
+                        </Typography>
+                    </Box>
+
+                    <Box mx={1} style={{ cursor: "pointer" }} >
+                        <Typography variant="h6" className="texto">
+                            Cadastrar Postagens
+                        </Typography>
+                    </Box>
+
 
                     <Box mx={1} style={{ cursor: "pointer" }} onClick={goLogout}>
                         <Typography variant="h6" className="texto">
-                            logout
+                            Logout
                         </Typography>
                     </Box>
 
@@ -84,11 +98,58 @@ function Navbar() {
         </AppBar>
     }
 
+    if (token == "") {
+        navbarhomeComponent = <AppBar position="relative" style={{ backgroundColor: "#263165" }}>
+            <Toolbar variant="dense" >
+                <Box style={{ cursor: "pointer" }} >
+                    <Typography variant="h5" className="titulo">
+                    <div>
+                    <img className="imglogo8" src="https://i.imgur.com/fmYFcHr.png" alt="" />
+                    </div>
+                    </Typography>
+                </Box>
+                <Box mx={1} style={{ cursor: "pointer" }} >
+                        <Typography variant="h6" className="texto">
+                            Home
+                        </Typography>
+                    </Box>
+
+                    <Box mx={1} style={{ cursor: "pointer" }} >
+                        <Typography variant="h6" className="texto">
+                            Sobre NÃ³s
+                        </Typography>
+                    </Box>
+
+                    <Box mx={1} style={{ cursor: "pointer" }} >
+                        <Typography variant="h6" className="texto">
+                            Contatos
+                        </Typography>
+                    </Box>
+                   <Box 
+                   display = "flex"
+                   justifyContent = "center"
+                   alignItems = "center"
+                   marginLeft = "450px" ></Box>
+                   
+
+                    <Box mx={1} style={{ cursor: "pointer" }} >
+                        <Typography variant="h6" className="texto">
+                            <Link to = "/login">
+                            Login
+                            </Link>
+                        </Typography>
+                    </Box>
+            </Toolbar>
+        </AppBar>
+    }
     return (
         <>
-           {navbarComponent}
+            {navbarComponent}
+            {navbarhomeComponent}
         </>
     )
 }
+
+
 
 export default Navbar;

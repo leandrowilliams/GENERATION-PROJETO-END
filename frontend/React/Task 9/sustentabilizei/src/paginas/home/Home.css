@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap%27");
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap%27%22");
 
 .fontes {
     font-size: 80px !important;
@@ -7,7 +7,7 @@
     height: 400px;
     border: 0px;
     margin-right: 50px; 
-    
+
 } 
 
 .textos {
@@ -108,4 +108,17 @@
     height: 400px;
     border: 0px;
     margin-right: 50px;
+}
+
+.holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.holder img, .holder Typography {
+    position: absolute;
+    font-size: 32px;
+    font-family: sans-serif;
+    text-align: center;
 }

@@ -23,7 +23,7 @@ function Footer() {
 
                             <Box display="flex">
                                 <div>
-                                    <img className="imglogo" src="https://i.imgur.com/2rjS8FM.png" alt="LOGO" />
+                                    <img className="imglogo" src="https://i.imgur.com/fmYFcHr.png" alt="LOGO" />
                                 </div>
                             </Box>
 
