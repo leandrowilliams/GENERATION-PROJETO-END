@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Typography, Box, Grid, Button } from '@material-ui/core';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -73,27 +73,36 @@ function Home() {
                 </Grid>
             </Grid>
             <Grid container direction="row" justifyContent="center" alignItems="center" className="grid2, page2">
-            <Box>
-                    <div>
-                    <img className="imglogo3" src="https://i.imgur.com/TjFA9mG.png" alt="" />
+                <Box>
+                    <div className="holder">
+                        
+                        <img src="https://i.imgur.com/TzH9iup.png" alt="SUSTENTABILIZEI-AJUDANDO" />
+                        <Typography className="sus-titulo" variant="h5" align="center" color="primary">AJUDANDO NOVAS GERAÇÕES A SE INTERESSAR PELA SUSTENTABILIDADE Por meio de parcerias, a SUSTENTABILIZEI está ajudando a próxima geração a conhecer o que há de mais moderno na área de sustentabilidade. Nossas parcerias alcançam e educam ao redor do mundo Trabalhar com Redes-Sociais para tornar a sustentabilidade parte de nosso futuro coletivo é uma iniciativa que promove a prosperidade e assegura nosso futuro.</Typography>
                     </div>
-                    
                 </Box>
             </Grid>
             <Grid container direction="row" justifyContent="center" alignItems="center" className="grid2, page2">
-            <Box>
+                <Box>
                     <div>
-                    <img className="imglogo3" src="https://i.imgur.com/TjFA9mG.png" alt="" />
+                        <img className="imglogo3" src="https://i.imgur.com/jcbi0LA.jpg" alt="SUSTENTABILIZEI-COLETOR-MESTRUAL" />
                     </div>
-                    
+
+                </Box>
+            </Grid>
+            <Grid container direction="row" justifyContent="center" alignItems="center" className="grid2, page2">
+                <Box>
+                    <div>
+                        <img className="imglogo3" src="https://i.imgur.com/AvvWdh0.png" alt="SUSTENTABILIZEI-IAMGREEN" />
+                    </div>
+
                 </Box>
             </Grid>
             <Grid container direction="row" justifyContent="center" alignItems="center" className="grid3, page3">
                 <Box>
                     <div>
-                    <img className="imglogo3" src="https://i.imgur.com/TjFA9mG.png" alt="" />
+                        <img className="imglogo3" src="https://i.imgur.com/SZ2clE3.png" alt="SUSTENTABILIZEI-ALIMENTO" />
                     </div>
-                    
+
                 </Box>
             </Grid>
             <Grid container direction="row" justifyContent="center" alignItems="center" className="grid4, page4">
@@ -106,7 +115,7 @@ function Home() {
                 </Box>
 
             </Grid>
-        </>    
+        </>
     );
 }
 
